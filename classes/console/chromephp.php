@@ -70,15 +70,15 @@ class Console_ChromePhp extends Console_Driver {
     public function group_open()
     {
     	$args = func_get_args();
-        $collapsed = count($args) == 2 ? array_pop($args) : FALSE;
+        $expanded = count($args) == 2 ? array_pop($args) : FALSE;
         
         if ($expanded === TRUE)
         {
-			call_user_func_array('Chromephp::groupCollapsed', $args);        	
+			call_user_func_array('Chromephp::group', $args);
         }
         else
         {
-			call_user_func_array('Chromephp::group', $args);
+			call_user_func_array('Chromephp::groupCollapsed', $args);        	
         }
     }
 
