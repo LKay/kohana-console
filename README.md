@@ -39,6 +39,7 @@ Usage
 -----
 
 For now Console Logging Helper supports only few message types and options. Hopefully that will increase in the future. Those are:
+
 * Log message - simple output to console
 * Error message - usually when something went wrong, using `Kohana_Log_Console` this will be displayed if the type is `Kohana::ERROR` (`'ERROR'`)
 * Warning message - using `Kohana_Log_Console` this will be displayed if the type is `Kohana::ALERT` (`'ALERT'`)
