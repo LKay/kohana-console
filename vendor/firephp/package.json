@@ -1,0 +1,19 @@
+{
+    "uid": "http://registry.pinf.org/cadorn.org/github/firephp-libs/programs/standalone/examples/Quickstart/",
+    "description": "FirePHP KO3 Helper",
+	"implements": {
+        "cadorn.org/insight/@meta/config/0": {
+            "server": {
+                "path": "/firephp-server"
+            },
+			"allow": {
+                "ips": [
+                    "*"
+                ],
+                "authkeys": [
+                    "*"
+                ]
+            }
+        }
+    }
+}

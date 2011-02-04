@@ -1,0 +1,3 @@
+[submodule "vendor/chromephp"]
+	path = vendor/chromephp
+	url = https://github.com/ccampbell/chromephp.git
