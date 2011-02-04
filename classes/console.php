@@ -133,7 +133,7 @@ class Console {
 	 */
 	public function __call($method, array $args)
 	{
-		if ($this->_browser() !== static::OTHER)
+		if ($this->_browser !== static::OTHER)
 		{
 			call_user_func_array(array($this->_logger, $method), $args);
 		}
