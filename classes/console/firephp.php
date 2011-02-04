@@ -79,7 +79,7 @@ class Console_FirePHP extends Console_Driver {
      * Opens and sends group log.
      *
      * @param  string  name
-     * @param  bool  collapsed
+     * @param  bool  expanded
 	 * @return  void
 	 * @uses  Arr::get
      */
@@ -89,7 +89,7 @@ class Console_FirePHP extends Console_Driver {
     {
     	$args = func_get_args();
 
-    	$collapsed = FALSE;
+    	$expanded = FALSE;
     	
     	if (count($args) == 2)
     	{
@@ -97,7 +97,7 @@ class Console_FirePHP extends Console_Driver {
     		list($args[0], $args[1], $args[2]) = array(arr::get($args, 0), arr::get($args, 0), arr::get($args, 1));
     	}
     	
-    	if ($collapsed)
+    	if ($expanded)
     	{
     		$this->_console->expand();
     	}

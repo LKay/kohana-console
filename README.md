@@ -45,7 +45,7 @@ For now Console Logging Helper supports only few message types and options. Hope
 * Warning message - using `Kohana_Log_Console` this will be displayed if the type is `Kohana::ALERT` (`'ALERT'`) or `Kohana::WARN` (this was added and the value is `WARN`)
 * Info message - currently supported only in Firefox's FirePHP, using `Kohana_Log_Console` this will be displayed if the type is `Kohana::INFO` (`'INFO'`).
   In Chrome console it will be displayed as regular log message.
-* Grouped messages - use this if you want to group your messages. You can make the group collapsed (currently not forking for FirePHP with no reason :( )
+* Grouped messages - use this if you want to group your messages. You can make the group expanded (currently not working for FirePHP with no particullar reason :( )
   
 Any other message type will be displayed just like log message.
 
@@ -75,7 +75,7 @@ All logging methods are chainable, so you can easily operate using one console o
 		->error('error')
 		->group_end('group1');
 		
-	// For collapsed group
+	// For expended group
 	$console->group_open('group2', TRUE)
 		->log('grouped log message')
 		->warn('grouped warning')

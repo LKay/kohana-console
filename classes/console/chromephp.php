@@ -64,7 +64,7 @@ class Console_ChromePhp extends Console_Driver {
      * Opens and sends group log.
      *
      * @param  string  value
-     * @param  bool  collapsed
+     * @param  bool  expanded
 	 * @return  void
      */
     public function group_open()
@@ -72,13 +72,13 @@ class Console_ChromePhp extends Console_Driver {
     	$args = func_get_args();
         $collapsed = count($args) == 2 ? array_pop($args) : FALSE;
         
-        if ($collapsed === TRUE)
+        if ($expanded === TRUE)
         {
-			call_user_func_array('Chromephp::group', $args);
+			call_user_func_array('Chromephp::groupCollapsed', $args);        	
         }
         else
         {
-			call_user_func_array('Chromephp::groupCollapsed', $args);        	
+			call_user_func_array('Chromephp::group', $args);
         }
     }
 
