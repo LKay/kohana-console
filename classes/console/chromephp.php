@@ -92,18 +92,5 @@ class Console_ChromePhp extends Console_Driver {
     {
 		call_user_func_array('Chromephp::groupEnd', func_get_args());
     }
-    
-    /**
-	 * Handles any other call.
-	 *
-	 * @param  string  method  Method name
-	 * @param  array  args  Method arguments
-	 * @return  void
-	 * @throws  Console_Exception
-	 */
-    public function __call($method, array $args)
-    {
-    	throw new Console_Exception('Invalid method :method called in :class',
-            array(':method' => $method, ':class' => get_class($this)));
-    }
+
 }
